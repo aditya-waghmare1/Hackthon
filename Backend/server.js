@@ -4,6 +4,7 @@ const cors = require('cors')
 //user defined modules
 
 const userRouter = require('./routes/user')
+const reviewRouter = require('./routes/review')
 
 const app = express()
 
@@ -13,6 +14,7 @@ app.use(cors())
 app.use(express.json())
 
 app.use('/user', userRouter)
+app.use('/review',reviewRouter)
 
 
 app.listen(4000, 'localhost', () => {
