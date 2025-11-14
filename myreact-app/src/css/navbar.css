@@ -1,0 +1,40 @@
+ul {
+  list-style: none;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  color: rgba(255, 255, 255, 0.8);
+
+  justify-content: space-between;
+  padding: 20px;
+  height: auto;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.792);
+}
+
+.left ul {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.right ul {
+  display: flex;
+  gap: 30px;
+}
+
+li a:hover {
+  color: white;
+  transition: all ease-in 0.3s;
+}
+
+.logout a {
+  color: goldenrod;
+}

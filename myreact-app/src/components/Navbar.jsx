@@ -1,21 +1,38 @@
 import React from "react";
+import "../css/navbar.css";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   return (
     <nav>
       <div className="left">
         <ul>
-          <li>All Movies</li>
-          <li>My Reviews</li>
-          <li>Reviews Shared with me</li>
-          <li>All reviews</li>
+          <h3>Movie Reviews</h3>
+          <li>
+            <Link to={"/all-movies"}>All Movies</Link>{" "}
+          </li>
+          <li>
+            <Link to={"/my-review"}>My Reviews</Link>{" "}
+          </li>
+          <li>
+            <Link>Reviews Shared with me</Link>{" "}
+          </li>
+          <li>
+            <Link to={"/all-reviews"}>All reviews</Link>{" "}
+          </li>
         </ul>
       </div>
       <div className="right">
         <ul>
-          <li>Edit profile</li>
-          <li>Change Password</li>
-          <li>Logout</li>
+          <li>
+            <Link to={"/edit-profile"}>Edit profile</Link>
+          </li>
+          <li>
+            <Link to={"/change-password"}>Change Password</Link>{" "}
+          </li>
+          <li className="logout">
+            <Link to={"/"}>Logout</Link>{" "}
+          </li>
         </ul>
       </div>
     </nav>
