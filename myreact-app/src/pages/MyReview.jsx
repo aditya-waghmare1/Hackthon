@@ -1,13 +1,19 @@
-import React, { useState } from "react";
-import "../css/allReviews.css";
+import React from "react";
 import Navbar from "../components/Navbar";
+import { useNavigate } from "react-router-dom";
 
-const AllReviews = () => {
+const MyReview = () => {
+  const navigate = useNavigate();
+
+  const editHandler = () => {
+    navigate("/edit-review");
+  };
+
   return (
     <div>
       <Navbar />
-      <div className="container mt-2">
-        <h3>All reviews</h3>
+      <div className="container">
+        <h3 className="mt-3">My reviews</h3>
         <div className="review-container">
           <div className="review-box">
             <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
@@ -19,6 +25,13 @@ const AllReviews = () => {
               An emotionally charged masterpiece. Beautiful cinematography!
             </p>
             <p className="last-updated">Last Updated: 2023:05:15 </p>
+            <div className="actions">
+              <button onClick={editHandler} className="btn btn-primary">
+                Edit
+              </button>
+              <button className="btn btn-success mx-2">Share</button>
+              <button className="btn btn-danger">Delete</button>
+            </div>
           </div>
           <div className="review-box">
             <div style={{ display: "flex", gap: 10, alignItems: "center" }}>
@@ -30,6 +43,17 @@ const AllReviews = () => {
               An emotionally charged masterpiece. Beautiful cinematography!
             </p>
             <p className="last-updated">Last Updated: 2023:05:15 </p>
+            <div className="actions">
+              <button
+                type="button"
+                onClick={editHandler}
+                className="btn btn-primary"
+              >
+                Edit
+              </button>
+              <button className="btn btn-success mx-2">Share</button>
+              <button className="btn btn-danger">Delete</button>
+            </div>
           </div>
         </div>
       </div>
@@ -37,4 +61,4 @@ const AllReviews = () => {
   );
 };
 
-export default AllReviews;
+export default MyReview;
