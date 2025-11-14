@@ -13,8 +13,13 @@ router.post('/login', (req, res) => {
     const sql = `SELECT * FROM users WHERE email = ?`
     pool.query(sql, [email],  (error, data) => {
         if (data != '') {
+
+            if(password ==data[0].password)
+            {
+                res.send({"status":"ok","data":data})
+            }
             
-            res.send({"status":"ok","data":data})
+            
 
         }
             
