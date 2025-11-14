@@ -1,0 +1,12 @@
+.review-container {
+  height: auto;
+  width: 100%;
+  /* background-color: red; */
+  padding: 10px;
+
+  .rating {
+    background-color: #21b9c1;
+    padding: 4px;
+    border-radius: 10px;
+  }
+}
