@@ -8,6 +8,8 @@ import AllMovies from "./pages/AllMovies";
 import EditReview from "./pages/EditReview";
 import EditProfile from "./pages/EditProfile";
 import ChangePassword from "./pages/ChangePassword";
+import CreateReview from "./pages/CreateReview";
+import DeleteReview from "./pages/DeleteReview";
 
 const App = () => {
   return (
@@ -21,6 +23,8 @@ const App = () => {
         <Route path="/edit-review" element={<EditReview />} />
         <Route path="/edit-profile" element={<EditProfile />} />
         <Route path="/change-password" element={<ChangePassword />} />
+        <Route path="/create-review" element={<CreateReview />} />
+        <Route path="/delete-review" element={<DeleteReview />} />
       </Routes>
     </div>
   );

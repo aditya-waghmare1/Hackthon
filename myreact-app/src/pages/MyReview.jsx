@@ -9,6 +9,11 @@ const MyReview = () => {
     navigate("/edit-review");
   };
 
+  const deleteHandler = () => {
+    console.log("Hello");
+    navigate("/delete-review");
+  };
+
   return (
     <div>
       <Navbar />
@@ -30,7 +35,9 @@ const MyReview = () => {
                 Edit
               </button>
               <button className="btn btn-success mx-2">Share</button>
-              <button className="btn btn-danger">Delete</button>
+              <button onClick={deleteHandler} className="btn btn-danger">
+                Delete
+              </button>
             </div>
           </div>
           <div className="review-box">

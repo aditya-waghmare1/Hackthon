@@ -1,8 +1,14 @@
 import React from "react";
 import Navbar from "../components/Navbar";
 import "../css/allMovies.css";
+import { useNavigate } from "react-router-dom";
 
 const AllMovies = () => {
+  const navigate = useNavigate();
+  const reviewHandler = () => {
+    navigate("/create-review");
+  };
+
   return (
     <div>
       <Navbar />
@@ -14,7 +20,9 @@ const AllMovies = () => {
             <p>
               <b>Release Date: </b>2009-02-21
             </p>
-            <button className="btn btn-primary">Review this movie</button>
+            <button onClick={reviewHandler} className="btn btn-primary">
+              Review this movie
+            </button>
           </div>
           <div className="movie my-3">
             <h4>Avatar</h4>
@@ -35,7 +43,9 @@ const AllMovies = () => {
             <p>
               <b>Release Date: </b>2009-02-21
             </p>
-            <button className="btn btn-primary">Review this movie</button>
+            <button onClick={reviewHandler} className="btn btn-primary">
+              Review this movie
+            </button>
           </div>
         </div>
       </div>
